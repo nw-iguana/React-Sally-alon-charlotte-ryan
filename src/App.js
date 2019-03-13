@@ -1,28 +1,47 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header.js';
 
-class App extends Component {
-  render() {
+
+
+const info = {
+  email: 'sally@test.com',
+  emailLink: 'mailto:sally@test.com',
+  phone: '123-456-7890'
+}
+
+function App(props) {
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header info={info}/>
+
+        <main>
+          <section className="education">
+            <h2>Education</h2>
+            <h3>University of North Florida</h3>
+            <p>Class of 2019</p>
+            <p>Bachelor of Arts: Event Planning, Minor in Underwater Basket Weaving</p>
+          </section>
+          <section className="employment">
+            <h2>Employment</h2>
+            <h3>Sandwich Wrangler | Fyre Festival</h3>
+            <ul>
+              <li>Toasted Bread</li>
+              <li>Put cheese on bread</li>
+            </ul>
+
+            <h3>Dinosaur Handler | Jurassic World</h3>
+            <ul>
+              <li>Fed Velociraptors</li>
+              <li>Made sure they didn't escape</li>
+              <li>Oops</li>
+            </ul>
+          </section>
+        </main>
       </div>
     );
   }
-}
+
 
 export default App;
